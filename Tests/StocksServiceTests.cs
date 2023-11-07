@@ -5,7 +5,6 @@ using Services;
 using FluentAssertions;
 using AutoFixture;
 using ServiceContracts.DTO;
-using System;
 using Entities;
 
 namespace Tests
@@ -134,11 +133,11 @@ namespace Tests
 				.Setup(temp => temp.CreateBuyOrder(It.IsAny<BuyOrder>()))
 				.ReturnsAsync(expected);
 
-			var actual = await _stockService.CreateBuyOrder(request);
+			var actual = (await _stockService.CreateBuyOrder(request)).ToBuyOrder();
 
 			actual.OrderId = expected.OrderId;
 
-			expected.Should().Be(actual);
+			actual.Should().BeEquivalentTo(expected);
 		}
 
 		#endregion
@@ -248,11 +247,11 @@ namespace Tests
 				.Setup(temp => temp.CreateSellOrder(It.IsAny<SellOrder>()))
 				.ReturnsAsync(expected);
 
-			var actual = await _stockService.CreateSellOrder(request);
+			var actual = (await _stockService.CreateSellOrder(request)).ToSellOrder();
 
 			actual.OrderId = expected.OrderId;
 
-			expected.Should().Be(actual);
+			expected.Should().BeEquivalentTo(actual);
 		}
 
 		#endregion

@@ -1,4 +1,6 @@
-﻿namespace ServiceContracts.DTO
+﻿using Entities;
+
+namespace ServiceContracts.DTO
 {
 	public class BuyOrderResponse
 	{
@@ -15,5 +17,21 @@
 		public double Price { get; set; }
 
 		public double TradeAmount { get; set; }
+	}
+
+	public static partial class OrderExtensions
+	{
+		public static BuyOrder ToBuyOrder(this BuyOrderResponse response)
+		{
+			return new BuyOrder()
+			{
+				OrderDateAndTime = response.OrderDateAndTime,
+				Quantity = response.Quantity,
+				Price = response.Price,
+				OrderId = response.OrderId,
+				StockSymbol = response.StockSymbol,
+				StockName = response.StockName,
+			};
+		}
 	}
 }

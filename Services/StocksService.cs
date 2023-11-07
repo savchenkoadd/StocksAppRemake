@@ -1,6 +1,8 @@
-﻿using RepositoryContracts;
+﻿using Entities;
+using RepositoryContracts;
 using ServiceContracts;
 using ServiceContracts.DTO;
+using Services.Helpers;
 
 namespace Services
 {
@@ -8,31 +10,67 @@ namespace Services
 	{
 		private readonly IStocksRepository _stocksRepository;
 
-        public StocksService(
+		public StocksService(
 				IStocksRepository stocksRepository
 			)
-        {
-            _stocksRepository = stocksRepository;
-        }
-
-        public Task<BuyOrderResponse> CreateBuyOrder(BuyOrderRequest? buyOrder)
 		{
-			throw new NotImplementedException();
+			_stocksRepository = stocksRepository;
 		}
 
-		public Task<SellOrderResponse> CreateSellOrder(SellOrderRequest? sellOrder)
+		public async Task<BuyOrderResponse> CreateBuyOrder(BuyOrderRequest? buyOrderRequest)
 		{
-			throw new NotImplementedException();
+			ValidationHelper.Validate(buyOrderRequest);
+
+			var response = await _stocksRepository.CreateBuyOrder(buyOrderRequest!.ToBuyOrder());
+
+			return ToBuyOrderResponse(response);
 		}
 
-		public Task<List<BuyOrderResponse>> GetBuyOrders()
+		public async Task<SellOrderResponse> CreateSellOrder(SellOrderRequest? sellOrderRequest)
 		{
-			throw new NotImplementedException();
+			ValidationHelper.Validate(sellOrderRequest);
+
+			var response = await _stocksRepository.CreateSellOrder(sellOrderRequest!.ToSellOrder());
+
+			return ToSellOrderResponse(response);
 		}
 
-		public Task<List<SellOrderResponse>> GetSellOrders()
+		public async Task<List<BuyOrderResponse>> GetBuyOrders()
 		{
-			throw new NotImplementedException();
+			return (await _stocksRepository.GetBuyOrders()).Select(x => ToBuyOrderResponse(x)).ToList();
+		}
+
+		public async Task<List<SellOrderResponse>> GetSellOrders()
+		{
+			return (await _stocksRepository.GetSellOrders()).Select(x => ToSellOrderResponse(x)).ToList();
+		}
+
+		private BuyOrderResponse ToBuyOrderResponse(BuyOrder buyOrder)
+		{
+			return new BuyOrderResponse()
+			{
+				OrderDateAndTime = buyOrder.OrderDateAndTime,
+				OrderId = buyOrder.OrderId,
+				Price = buyOrder.Price,
+				Quantity = buyOrder.Quantity,
+				StockName = buyOrder.StockName,
+				StockSymbol = buyOrder.StockSymbol,
+				TradeAmount = buyOrder.Price * buyOrder.Quantity
+			};
+		}
+
+		private SellOrderResponse ToSellOrderResponse(SellOrder sellOrder)
+		{
+			return new SellOrderResponse()
+			{
+				OrderDateAndTime = sellOrder.OrderDateAndTime,
+				OrderId = sellOrder.OrderId,
+				Price = sellOrder.Price,
+				Quantity = sellOrder.Quantity,
+				StockName = sellOrder.StockName,
+				StockSymbol = sellOrder.StockSymbol,
+				TradeAmount = sellOrder.Price * sellOrder.Quantity
+			};
 		}
 	}
 }

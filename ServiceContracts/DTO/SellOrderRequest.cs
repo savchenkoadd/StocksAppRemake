@@ -22,7 +22,7 @@ namespace ServiceContracts.DTO
 		public double Price { get; set; }
 	}
 
-	public static class SellOrderExtensions
+	public static partial class OrderExtensions
 	{
 		public static SellOrder ToSellOrder(this SellOrderRequest sellOrderRequest)
 		{
