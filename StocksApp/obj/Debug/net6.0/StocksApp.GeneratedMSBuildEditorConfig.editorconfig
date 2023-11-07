@@ -15,3 +15,31 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp
 build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Artem/Documents/GitHub/StocksAppRemake/StocksApp/Views/Stocks/Explore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tzXEV4cGxvcmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Artem/Documents/GitHub/StocksAppRemake/StocksApp/Views/Trade/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Artem/Documents/GitHub/StocksAppRemake/StocksApp/Views/Trade/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZGVcT3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Artem/Documents/GitHub/StocksAppRemake/StocksApp/Views/Trade/OrdersPDF.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZGVcT3JkZXJzUERGLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Artem/Documents/GitHub/StocksAppRemake/StocksApp/Views/Trade/Thanks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZGVcVGhhbmtzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Artem/Documents/GitHub/StocksAppRemake/StocksApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Artem/Documents/GitHub/StocksAppRemake/StocksApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

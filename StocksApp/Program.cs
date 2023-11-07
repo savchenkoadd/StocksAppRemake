@@ -22,6 +22,12 @@ namespace StocksApp
 					builder.Configuration.GetSection("FinnhubOptions")
 				);
 
+			builder.Services.Configure<TradingOptions>(
+					builder.Configuration.GetSection("TradingOptions")
+				);
+
+			builder.Services.AddControllersWithViews();
+
 			builder.Services.AddHttpClient();
 			builder.Services.AddScoped<IFinnhubService, FinnhubService>();
 			builder.Services.AddScoped<IStocksService, StocksService>();
@@ -30,8 +36,14 @@ namespace StocksApp
 
 			var app = builder.Build();
 
+			if (app.Environment.IsDevelopment())
+			{
+				app.UseDeveloperExceptionPage();
+			}
 
-			app.MapGet("/", () => "Hello World!");
+			app.UseStaticFiles();
+			app.UseRouting();
+			app.MapControllers();
 
 			app.Run();
 		}

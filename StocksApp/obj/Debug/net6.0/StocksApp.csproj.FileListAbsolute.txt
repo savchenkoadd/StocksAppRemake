@@ -93,3 +93,15 @@ C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Repos
 C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Microsoft.Extensions.Http.dll
 C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Repositories.dll
 C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Repositories.pdb
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\obj\Debug\net6.0\StocksApp.RazorAssemblyInfo.cache
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\obj\Debug\net6.0\StocksApp.RazorAssemblyInfo.cs
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Rotativa.AspNetCore.dll
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\obj\Debug\net6.0\StocksApp.MvcApplicationPartsAssemblyInfo.cs

@@ -1,0 +1,14 @@
+﻿@model List<Stock>
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+	@foreach (var item in Model)
+	{
+		<h3>@item.StockName | @item.StockSymbol</h3>
+	}
+</body>
+</html>
