@@ -1,6 +1,10 @@
 using Entities;
 using Microsoft.EntityFrameworkCore;
 using Options;
+using Repositories;
+using RepositoryContracts;
+using ServiceContracts;
+using Services;
 
 namespace StocksApp
 {
@@ -19,6 +23,10 @@ namespace StocksApp
 				);
 
 			builder.Services.AddHttpClient();
+			builder.Services.AddScoped<IFinnhubService, FinnhubService>();
+			builder.Services.AddScoped<IStocksService, StocksService>();
+			builder.Services.AddScoped<IFinnhubRepository, FinnhubRepository>();
+			builder.Services.AddScoped<IStocksRepository, StocksRepository>();
 
 			var app = builder.Build();
 

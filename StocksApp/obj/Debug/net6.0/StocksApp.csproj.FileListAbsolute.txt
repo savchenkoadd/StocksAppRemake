@@ -84,3 +84,12 @@ C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Syste
 C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Options.dll
 C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Options.pdb
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\RepositoryContracts.dll
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\ServiceContracts.dll
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Services.dll
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\ServiceContracts.pdb
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Services.pdb
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\RepositoryContracts.pdb
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Microsoft.Extensions.Http.dll
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Repositories.dll
+C:\Users\Artem\Documents\GitHub\StocksAppRemake\StocksApp\bin\Debug\net6.0\Repositories.pdb
