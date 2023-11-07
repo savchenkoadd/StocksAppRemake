@@ -1,7 +1,8 @@
 ﻿namespace Options
 {
-	public class Class1
+	public class FinnhubOptions
 	{
-
+		public string? ApiKey { get; set; }
+		public string? DefaultStockSymbol { get; set; }
 	}
 }

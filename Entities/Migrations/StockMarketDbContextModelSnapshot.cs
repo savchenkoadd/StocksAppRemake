@@ -59,7 +59,6 @@ namespace Entities.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("OrderDateAndTime")
-                        .HasMaxLength(20)
                         .HasColumnType("datetime2");
 
                     b.Property<double>("Price")
@@ -67,6 +66,11 @@ namespace Entities.Migrations
 
                     b.Property<long>("Quantity")
                         .HasColumnType("bigint");
+
+                    b.Property<string>("StockName")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("StockSymbol")
                         .IsRequired()

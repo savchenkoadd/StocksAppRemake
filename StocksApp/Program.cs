@@ -18,6 +18,8 @@ namespace StocksApp
 					builder.Configuration.GetSection("FinnhubOptions")
 				);
 
+			builder.Services.AddHttpClient();
+
 			var app = builder.Build();
 
 

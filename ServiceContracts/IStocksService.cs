@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ServiceContracts.DTO;
 
 namespace ServiceContracts
 {
-	internal class IStocksService
+	public interface IStocksService
 	{
+		Task<BuyOrderResponse> CreateBuyOrder(BuyOrderRequest? buyOrder);
+
+		Task<SellOrderResponse> CreateSellOrder(SellOrderRequest? sellOrder);
+
+		Task<List<BuyOrderResponse>> GetBuyOrders();
+
+		Task<List<SellOrderResponse>> GetSellOrders();
 	}
 }
