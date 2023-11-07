@@ -14,24 +14,39 @@ namespace Services
             _finnhubRepository = finnhubRepository;
         }
 
-        public Task<Dictionary<string, object>?> GetCompanyProfile(string? stockSymbol)
+        public async Task<Dictionary<string, object>?> GetCompanyProfile(string? stockSymbol)
 		{
-			throw new NotImplementedException();
+			if (string.IsNullOrEmpty(stockSymbol))
+			{
+				throw new ArgumentNullException("stockSymbol cannot be null or empty");
+			}
+
+			return await _finnhubRepository.GetCompanyProfile(stockSymbol);
 		}
 
-		public Task<Dictionary<string, object>?> GetStockPriceQuote(string? stockSymbol)
+		public async Task<Dictionary<string, object>?> GetStockPriceQuote(string? stockSymbol)
 		{
-			throw new NotImplementedException();
+			if (string.IsNullOrEmpty(stockSymbol))
+			{
+				throw new ArgumentNullException("stockSymbol cannot be null or empty");
+			}
+
+			return await _finnhubRepository.GetStockPriceQuote(stockSymbol);
 		}
 
-		public Task<List<Dictionary<string, string>>?> GetStocks()
+		public async Task<List<Dictionary<string, string>>?> GetStocks()
 		{
-			throw new NotImplementedException();
+			return await _finnhubRepository.GetStocks();
 		}
 
-		public Task<Dictionary<string, object>?> SearchStocks(string? stockNameToSearch)
+		public async Task<Dictionary<string, object>?> SearchStocks(string? stockNameToSearch)
 		{
-			throw new NotImplementedException();
+			if (stockNameToSearch is null)
+			{
+				throw new ArgumentNullException("stockNameToSearch cannot be null");
+			}
+
+			return await _finnhubRepository.SearchStocks(stockNameToSearch);
 		}
 	}
 }
