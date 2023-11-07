@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "F5fxgAKJLkJeUhQBdGkDYx7cOogeEOjxwZRLLofadY5vnrxzRUXLbGeCc7oWGxL3znThHayeX9QWRu0W3f0FHw==",
+  "dgSpecHash": "BCCkRrkg2tBHZthUai4aydKMM6Kd6e4zq3FvpDUZOencQTRpZsU4PXCj56GQk1e6T8VTnD6cKk+nbzJtR3CLGg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Artem\\Documents\\GitHub\\StocksAppRemake\\Repositories\\Repositories.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "C:\\Users\\Artem\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Artem\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\Artem\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Artem\\.nuget\\packages\\microsoft.extensions.http\\7.0.0\\microsoft.extensions.http.7.0.0.nupkg.sha512",
     "C:\\Users\\Artem\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\Artem\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Artem\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
