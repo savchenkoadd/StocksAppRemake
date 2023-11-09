@@ -81,6 +81,27 @@ namespace Entities.Migrations
 
                     b.ToTable("SellOrder", (string)null);
                 });
+
+            modelBuilder.Entity("Entities.Stock", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("StockName")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.Property<string>("StockSymbol")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Stock", (string)null);
+                });
 #pragma warning restore 612, 618
         }
     }

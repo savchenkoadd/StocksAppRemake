@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Options;
 using Repositories;
 using RepositoryContracts;
+using Serilog;
 using ServiceContracts;
 using Services;
 
@@ -13,6 +14,12 @@ namespace StocksApp
 		public static void Main(string[] args)
 		{
 			var builder = WebApplication.CreateBuilder(args);
+
+			builder.Host.UseSerilog((HostBuilderContext context, IServiceProvider services, LoggerConfiguration loggerConfiguration) =>
+			{
+				loggerConfiguration.ReadFrom.Configuration(context.Configuration)
+				.ReadFrom.Services(services);
+			});
 
 			builder.Services.AddDbContext<StockMarketDbContext>(
 					options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")

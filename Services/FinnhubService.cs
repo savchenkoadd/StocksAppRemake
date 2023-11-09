@@ -1,5 +1,7 @@
-﻿using RepositoryContracts;
+﻿using Entities;
+using RepositoryContracts;
 using ServiceContracts;
+using System.Text.Json;
 
 namespace Services
 {
@@ -14,7 +16,7 @@ namespace Services
             _finnhubRepository = finnhubRepository;
         }
 
-        public async Task<Dictionary<string, object>?> GetCompanyProfile(string? stockSymbol)
+		public async Task<Dictionary<string, object>?> GetCompanyProfile(string? stockSymbol)
 		{
 			if (string.IsNullOrEmpty(stockSymbol))
 			{
@@ -39,14 +41,18 @@ namespace Services
 			return await _finnhubRepository.GetStocks();
 		}
 
-		public async Task<Dictionary<string, object>?> SearchStocks(string? stockNameToSearch)
+		public async Task<Dictionary<string, object>?> SearchStocks(string? stockSymbolToSearch)
 		{
-			if (stockNameToSearch is null)
+			if (stockSymbolToSearch is null)
 			{
-				throw new ArgumentNullException("stockNameToSearch cannot be null");
+				throw new ArgumentNullException();
+			}
+			if (stockSymbolToSearch.Length == 0)
+			{
+				throw new ArgumentException();
 			}
 
-			return await _finnhubRepository.SearchStocks(stockNameToSearch);
+			return await _finnhubRepository.SearchStocks(stockSymbolToSearch);
 		}
 	}
 }

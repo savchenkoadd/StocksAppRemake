@@ -11,6 +11,7 @@ namespace Entities
 
         public DbSet<BuyOrder> BuyOrders { get; set; }
 		public DbSet<SellOrder> SellOrders { get; set; }
+		public DbSet<Stock> Stocks { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
@@ -18,6 +19,7 @@ namespace Entities
 
 			modelBuilder.Entity<BuyOrder>().ToTable(nameof(BuyOrders));
 			modelBuilder.Entity<SellOrder>().ToTable(nameof(SellOrder));
+			modelBuilder.Entity<Stock>().ToTable(nameof(Stock));
 		}
 	}
 }

@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "Iq5LT0RxG46vHJpCrMlP9+LfTezwco//MYDJpxqUakc=",
+  "Hash": "a1Gx8F7mIj1q9jHKcMu+/36M+BoQAP53eAsTodXiM4k=",
   "Source": "StocksApp",
   "BasePath": "_content/StocksApp",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "StocksApp\\wwwroot",
+      "Source": "StocksApp",
+      "ContentRoot": "C:\\Users\\Artem\\Documents\\GitHub\\StocksAppRemake\\StocksApp\\wwwroot\\",
+      "BasePath": "_content/StocksApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Artem\\Documents\\GitHub\\StocksAppRemake\\StocksApp\\wwwroot\\StyleSheet.css",
+      "SourceId": "StocksApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Documents\\GitHub\\StocksAppRemake\\StocksApp\\wwwroot\\",
+      "BasePath": "_content/StocksApp",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ]
 }

@@ -1,4 +1,6 @@
-﻿namespace RepositoryContracts
+﻿using Entities;
+
+namespace RepositoryContracts
 {
 	public interface IFinnhubRepository
 	{
@@ -8,6 +10,6 @@
 
 		Task<List<Dictionary<string, string>>?> GetStocks();
 
-		Task<Dictionary<string, object>?> SearchStocks(string stockNameToSearch);
+		Task<Dictionary<string, object>?> SearchStocks(string stockSymbolToSearch);
 	}
 }

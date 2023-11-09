@@ -6,12 +6,12 @@ namespace Repositories
 {
 	public class StocksRepository : IStocksRepository
 	{
-        private readonly StockMarketDbContext _dbContext;
+		private readonly StockMarketDbContext _dbContext;
 
-        public StocksRepository(StockMarketDbContext stockMarketDbContext)
-        {
-            _dbContext = stockMarketDbContext;
-        }
+		public StocksRepository(StockMarketDbContext stockMarketDbContext)
+		{
+			_dbContext = stockMarketDbContext;
+		}
 
 		public async Task<BuyOrder> CreateBuyOrder(BuyOrder buyOrder)
 		{

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Options;
+﻿using Entities;
+using Microsoft.Extensions.Options;
 using Options;
 using RepositoryContracts;
 using System.Net.Http;
@@ -62,17 +63,17 @@ namespace Repositories
 			}
 		}
 
-		public async Task<Dictionary<string, object>?> SearchStocks(string stockNameToSearch)
+		public async Task<Dictionary<string, object>?> SearchStocks(string stockSymbolToSearch)
 		{
 			using (HttpClient httpClient = _httpClientFactory.CreateClient())
 			{
-				HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, $"https://finnhub.io/api/v1/search?q={stockNameToSearch}&token={_finnhubOptions.ApiKey}");
+				HttpRequestMessage httpRequestMessage = new HttpRequestMessage(HttpMethod.Get, $"https://finnhub.io/api/v1/search?q={stockSymbolToSearch}&token={_finnhubOptions.ApiKey}");
 
-				var response = await httpClient.SendAsync(request);
+				var response = await httpClient.SendAsync(httpRequestMessage);
 
-				var responseString = await response.Content.ReadAsStringAsync();
+				var responseAsString = await response.Content.ReadAsStringAsync();
 
-				return JsonSerializer.Deserialize<Dictionary<string, object>>(responseString);
+				return JsonSerializer.Deserialize<Dictionary<string, object>>(responseAsString);
 			}
 		}
 	}

@@ -75,7 +75,7 @@ namespace StocksApp.Controllers
 				SellOrders = await _stocksService.GetSellOrders()
 			};
 
-			return new ViewAsPdf(viewName: "PersonsPDF", orders, ViewData);
+			return View(orders);
 		}
 
 		[HttpPost]

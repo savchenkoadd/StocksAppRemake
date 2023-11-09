@@ -1,4 +1,6 @@
-﻿namespace ServiceContracts
+﻿using Entities;
+
+namespace ServiceContracts
 {
 	public interface IFinnhubService
 	{
@@ -8,6 +10,6 @@
 
 		Task<List<Dictionary<string, string>>?> GetStocks();
 
-		Task<Dictionary<string, object>?> SearchStocks(string? stockNameToSearch);
+		Task<Dictionary<string, object>?> SearchStocks(string? stockSymbolToSearch);
 	}
 }
